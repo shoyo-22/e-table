@@ -1,0 +1,9 @@
+{% if week_days_list %}
+<ul>
+  {% for day in week_days_list %}
+  <li><a href="{% url 'table:detail' day.id %}">{{ day.day_of_week }}</a></li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No data</p>
+{% endif %}
